@@ -118,18 +118,16 @@ public class Main {
 				input.nextLine();
 				System.out.println("Enter the entry name:");
 				String entryName3 = input.nextLine();
-				if (phoneBookMng.findEntryByName(entryName3) != null) {
-					System.out
-							.println("Enter the entry number u want to remove");
-					String entryPhoneNumber = input.nextLine();
-					if (phoneBookMng.removeNumber(entryName3, entryPhoneNumber)) {
-						System.out.println("Remove successfully");
-					} else {
-						System.out.println("Remove NOT successfully");
-					}
+				System.out.println("Enter the number u want to remove:");
+				String entryPhoneNumber = input.nextLine();
+				PhoneEntry entry2 = phoneBookMng.findEntryByName(entryName3);
+				if ((entry2 != null)
+						&& entry2.getPhoneNumber().remove(entryPhoneNumber)) {
+					System.out.println("Remove phone number successfully");
 				} else {
-					System.out.println("There is no targeted entry");
+					System.out.println("Failed");
 				}
+
 				break;
 
 			case 6:
