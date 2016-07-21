@@ -45,6 +45,7 @@ public class PhoneEntry {
 		if (this.phoneNumber.remove(phoneNumber)) {
 			return true;
 		} else
+		
 			return false;
 
 	}
