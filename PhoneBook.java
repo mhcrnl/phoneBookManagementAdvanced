@@ -124,20 +124,6 @@ public class PhoneBook {
 		return false;
 	}
 
-	public boolean removeNumber(String entryName, String entryNumber) {
-		for (int i = 0; i < phoneEntries.size(); i++) {
-			for (int j = 0; j < phoneEntries.get(i).getPhoneNumber().size(); j++) {
-				if ((phoneEntries.get(i).getPhoneNumber().get(j)
-						.equals(entryNumber))
-						&& (phoneEntries.get(i).getName().equals(entryName))) {
-					phoneEntries.get(i).getPhoneNumber().remove(j);
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-
 	public boolean movePhoneNumberToOtherEntry(String entryNameTarget,
 			String entryNameSource, String phoneNumber) {
 		if ((findEntryByName(entryNameTarget) != null)
@@ -156,6 +142,7 @@ public class PhoneBook {
 
 				}
 
+				
 			}
 			if (check) {
 				for (int i = 0; i < phoneEntries.size(); i++) {
