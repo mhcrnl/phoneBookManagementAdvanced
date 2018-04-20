@@ -6,9 +6,12 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-            //TEST PERSOANA    
+            //TEST PERSOANA  
+            Controller con = new Controller();
+            con.start();
             Persoana.test1();
             Contact.test2();
+            
 		PhoneBook phoneBookMng = new PhoneBook();
 		Scanner input = new Scanner(System.in);
 		boolean check = true;
