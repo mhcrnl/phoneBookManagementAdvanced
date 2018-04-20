@@ -6,7 +6,9 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-
+            //TEST PERSOANA    
+            Persoana.test1();
+            Contact.test2();
 		PhoneBook phoneBookMng = new PhoneBook();
 		Scanner input = new Scanner(System.in);
 		boolean check = true;
@@ -35,7 +37,7 @@ public class Main {
 				System.out.println("Name of entryphone:");
 				entry.setName(input.nextLine());
 				while (true) {
-					System.out.println("Number of entryphone: ");
+					System.out.println("Number of entryphone[insert 0 to exit]: ");
 					String entryNumberInput = input.nextLine();
 					if (entryNumberInput.equals("0")) {
 						break;
@@ -184,6 +186,8 @@ public class Main {
 
 			case 8:
 				phoneBookMng.disp();
+                            
+                        
 				break;
 
 			case 9:
